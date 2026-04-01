@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghouti Belhadj-Kacem | Data Scientist & AI Engineer</title>
+    <meta name="description" content="Ghouti Belhadj - Data & AI Engineer portfolio">
+    <meta name="theme-color" content="#000000">
+    <title>Ghouti Belhadj | Data & AI Engineer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23ffffff' font-weight='700'>G</text></svg>">
     <style>
         * {
             margin: 0;
@@ -17,8 +20,8 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            background-color: #0a0a0a;
-            color: #e0e0e0;
+            background-color: #000000;
+            color: #ffffff;
             line-height: 1.6;
         }
 
@@ -27,16 +30,17 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(12px);
             z-index: 50;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         nav .container {
-            max-width: 52rem;
+            max-width: 56rem;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -44,70 +48,62 @@
 
         nav .logo {
             font-size: 1.25rem;
-            color: #999;
+            color: #ffffff;
             text-decoration: none;
-            transition: color 0.3s;
+            font-weight: 300;
+            transition: opacity 0.3s;
         }
 
         nav .logo:hover {
-            color: #fff;
+            opacity: 0.7;
         }
 
         nav .links {
             display: flex;
-            gap: 0.25rem;
-            background: rgba(255, 255, 255, 0.06);
-            border-radius: 0.5rem;
-            padding: 0.25rem;
+            gap: 2rem;
         }
 
         nav a.nav-link {
             text-decoration: none;
-            color: #999;
-            font-size: 0.8rem;
-            padding: 0.4rem 0.9rem;
-            border-radius: 0.375rem;
-            transition: all 0.3s;
+            color: #888888;
+            font-size: 0.9rem;
+            transition: color 0.3s;
         }
 
-        nav a.nav-link:hover {
-            color: #fff;
-        }
-
+        nav a.nav-link:hover,
         nav a.nav-link.active {
-            background: rgba(255, 255, 255, 0.12);
-            color: #fff;
+            color: #ffffff;
         }
 
         /* Main Container */
         .container {
-            max-width: 52rem;
+            max-width: 56rem;
             margin: 0 auto;
-            padding: 0 1.5rem;
+            padding: 0 2rem;
         }
 
         /* Sections */
         section {
-            padding: 4rem 0;
+            padding: 5rem 0;
         }
 
         section:first-of-type {
-            padding-top: 7rem;
+            padding-top: 8rem;
         }
 
         h1 {
-            font-size: 2.75rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
             line-height: 1.1;
             color: #ffffff;
         }
 
         h2 {
             font-size: 1.75rem;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 2.5rem;
-            color: #4a9eff;
+            color: #ffffff;
         }
 
         /* Hero Section */
@@ -115,7 +111,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 2rem;
+            gap: 3rem;
         }
 
         .hero-text {
@@ -123,117 +119,107 @@
         }
 
         .hero-photo {
-            width: 120px;
-            height: 120px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
             overflow: hidden;
             flex-shrink: 0;
-            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            background: linear-gradient(135deg, #333333, #1a1a1a);
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 3px solid rgba(74, 158, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
         }
 
-        .hero-photo .initials {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #4a9eff;
+        .hero-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .subtitle {
             font-size: 1.1rem;
-            color: #888;
-            margin-bottom: 2rem;
+            color: #888888;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
         }
 
         .bio {
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
+            gap: 0.75rem;
             margin-bottom: 2rem;
-            font-size: 0.9rem;
-            color: #999;
+            font-size: 0.95rem;
+            color: #888888;
         }
 
         .bio-item {
             display: flex;
-            gap: 0.5rem;
-            align-items: flex-start;
+            gap: 0.75rem;
+            align-items: center;
         }
 
-        .bio-item strong {
-            color: #e0e0e0;
+        .bio-item span {
+            font-size: 1.1rem;
         }
 
         /* Social Icons */
         .social-icons {
             display: flex;
-            gap: 0.75rem;
-            margin-bottom: 2.5rem;
+            gap: 1rem;
+            margin-bottom: 3rem;
         }
 
         .social-icon {
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             border-radius: 0.5rem;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
-            color: #999;
-            font-size: 1.1rem;
+            color: #888888;
             transition: all 0.3s;
         }
 
         .social-icon:hover {
             background: rgba(255, 255, 255, 0.12);
-            color: #fff;
-            border-color: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.2);
         }
 
         .social-icon svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-
-        /* Alternance banner */
-        .alternance-banner {
-            font-size: 0.85rem;
-            color: #888;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            margin-top: 1rem;
-        }
-
-        .alternance-banner strong {
-            color: #4a9eff;
+            width: 20px;
+            height: 20px;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
         }
 
         /* Experience Cards */
         .experience-card {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 0.75rem;
-            padding: 1.25rem 1.5rem;
-            margin-bottom: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1.25rem;
             display: flex;
-            align-items: center;
-            gap: 1.25rem;
+            align-items: flex-start;
+            gap: 1.5rem;
             transition: all 0.3s;
         }
 
         .experience-card:hover {
-            background: rgba(255, 255, 255, 0.07);
-            border-color: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.12);
         }
 
         .exp-logo {
-            width: 48px;
-            height: 48px;
+            width: 56px;
+            height: 56px;
             border-radius: 0.5rem;
             background: rgba(255, 255, 255, 0.06);
             display: flex;
@@ -243,121 +229,97 @@
             font-size: 0.7rem;
             font-weight: 700;
             color: #666;
-            letter-spacing: 0.02em;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .exp-logo.bcg { background: linear-gradient(135deg, #0a4d2e, #0d6b3e); color: #4ade80; }
-        .exp-logo.acadomia { background: linear-gradient(135deg, #2d1a4e, #4a2d7a); color: #a78bfa; }
-        .exp-logo.devexplore { background: linear-gradient(135deg, #1a3a4e, #1e5a7e); color: #60bfff; }
+        .exp-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 6px;
+        }
 
-        .exp-info {
-            flex: 1;
+        .exp-logo svg {
+            width: 100%;
+            height: 100%;
         }
 
         .exp-info h3 {
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 600;
-            color: #fff;
-            margin-bottom: 0.2rem;
+            color: #ffffff;
+            margin-bottom: 0.3rem;
         }
 
         .exp-info .exp-role {
-            font-size: 0.85rem;
-            color: #999;
+            font-size: 0.9rem;
+            color: #888888;
+            margin-bottom: 0.25rem;
         }
 
         .exp-info .exp-date {
-            font-size: 0.75rem;
-            color: #666;
-            margin-top: 0.2rem;
+            font-size: 0.8rem;
+            color: #666666;
         }
 
         .exp-info .exp-desc {
-            font-size: 0.85rem;
-            color: #777;
+            font-size: 0.9rem;
+            color: #888888;
             margin-top: 0.5rem;
             line-height: 1.6;
         }
 
-        /* Projects */
-        .project {
-            background: rgba(255, 255, 255, 0.04);
-            border: 1px solid rgba(255, 255, 255, 0.06);
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 0.75rem;
-            padding: 1.25rem 1.5rem;
-            margin-bottom: 1rem;
-            cursor: pointer;
+            padding: 1.5rem;
             transition: all 0.3s;
-        }
-
-        .project:hover {
-            background: rgba(255, 255, 255, 0.07);
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        .project-header {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
         }
 
         .project-title {
-            font-size: 1rem;
+            font-size: 1.05rem;
             font-weight: 600;
-            color: #fff;
-        }
-
-        .chevron {
-            font-size: 1rem;
-            transition: transform 0.3s;
-            flex-shrink: 0;
-            color: #666;
-        }
-
-        .project.expanded .chevron {
-            transform: rotate(90deg);
-        }
-
-        .project-desc {
-            color: #888;
-            margin-bottom: 0.75rem;
-            line-height: 1.6;
-            font-size: 0.9rem;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.4rem;
+            color: #ffffff;
             margin-bottom: 0.5rem;
         }
 
-        .tech-tag {
-            font-size: 0.7rem;
-            padding: 0.2rem 0.5rem;
-            background: rgba(74, 158, 255, 0.1);
-            color: #4a9eff;
-            border-radius: 0.25rem;
-            border: 1px solid rgba(74, 158, 255, 0.15);
+        .project-desc {
+            color: #888888;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            font-size: 0.9rem;
+            flex-grow: 1;
         }
 
         .project-details {
-            display: none;
-            padding-top: 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            margin-top: 1rem;
-        }
-
-        .project.expanded .project-details {
-            display: block;
-        }
-
-        .project-details p {
-            font-size: 0.85rem;
-            color: #888;
+            color: #777777;
+            font-size: 0.9rem;
             line-height: 1.7;
+            margin-bottom: 1rem;
+            display: none;
+        }
+
+        .project-card.expanded .project-details {
+            display: block;
         }
 
         .highlights {
@@ -367,7 +329,7 @@
         .highlights-label {
             font-size: 0.8rem;
             font-weight: 600;
-            color: #999;
+            color: #888888;
             margin-bottom: 0.4rem;
         }
 
@@ -376,85 +338,136 @@
         }
 
         .highlights-list li {
-            font-size: 0.8rem;
-            color: #888;
-            margin-bottom: 0.2rem;
+            font-size: 0.85rem;
+            color: #888888;
+            margin-bottom: 0.3rem;
             display: flex;
             gap: 0.5rem;
         }
 
-        .highlights-list li span {
-            color: #4a9eff;
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tag {
+            font-size: 0.75rem;
+            padding: 0.3rem 0.65rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: #888888;
+            border-radius: 0.3rem;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .project-link {
+            flex: 1;
+            padding: 0.6rem;
+            background: rgba(255, 255, 255, 0.04);
+            color: #888888;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            text-align: center;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+        }
+
+        .project-link:hover {
+            background: rgba(255, 255, 255, 0.08);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .project-link svg {
+            width: 14px;
+            height: 14px;
+            stroke: currentColor;
+            stroke-width: 1.5;
+            fill: none;
         }
 
         /* Skills */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
+            gap: 2.5rem;
             margin-bottom: 2.5rem;
         }
 
         .skill-category-title {
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: #4a9eff;
-            margin-bottom: 0.75rem;
+            letter-spacing: 0.12em;
+            color: #888888;
+            margin-bottom: 1rem;
         }
 
         .skill-list {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.4rem;
+            gap: 0.5rem;
         }
 
         .skill-item {
-            padding: 0.35rem 0.65rem;
+            padding: 0.4rem 0.75rem;
             background: rgba(255, 255, 255, 0.04);
-            color: #bbb;
-            border-radius: 0.25rem;
-            font-size: 0.8rem;
+            color: #888888;
+            border-radius: 0.3rem;
+            font-size: 0.85rem;
             border: 1px solid rgba(255, 255, 255, 0.06);
             transition: all 0.3s;
-            cursor: default;
         }
 
         .skill-item:hover {
             background: rgba(255, 255, 255, 0.08);
-            color: #fff;
+            color: #ffffff;
         }
 
         .languages-section {
             margin-top: 2.5rem;
-            padding-top: 2rem;
+            padding-top: 2.5rem;
             border-top: 1px solid rgba(255, 255, 255, 0.06);
         }
 
         .languages-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 2rem;
         }
 
         .language-item p:first-child {
-            font-weight: 600;
-            margin-bottom: 0.2rem;
-            color: #e0e0e0;
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+            color: #ffffff;
         }
 
         .language-item p:last-child {
-            font-size: 0.8rem;
-            color: #666;
+            font-size: 0.85rem;
+            color: #666666;
         }
 
         /* Contact */
         .contact-text {
             font-size: 1rem;
-            color: #888;
+            color: #888888;
             margin-bottom: 2rem;
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         .button-group {
@@ -464,9 +477,9 @@
         }
 
         .btn {
-            padding: 0.65rem 1.5rem;
+            padding: 0.7rem 1.75rem;
             border-radius: 0.5rem;
-            font-weight: 600;
+            font-weight: 500;
             font-size: 0.9rem;
             text-decoration: none;
             transition: all 0.3s;
@@ -475,37 +488,39 @@
         }
 
         .btn-primary {
-            background: #4a9eff;
-            color: #0a0a0a;
+            background: #ffffff;
+            color: #000000;
         }
 
         .btn-primary:hover {
-            background: #6db3ff;
+            background: #f0f0f0;
+            transform: translateY(-2px);
         }
 
         .btn-secondary {
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            background: rgba(255, 255, 255, 0.04);
-            color: #e0e0e0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: transparent;
+            color: #ffffff;
         }
 
         .btn-secondary:hover {
             background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.3);
         }
 
         /* Footer */
         footer {
             border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding: 2.5rem 0;
+            padding: 3rem 0;
             text-align: center;
-            color: #555;
-            font-size: 0.8rem;
+            color: #555555;
+            font-size: 0.85rem;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             h2 {
@@ -516,11 +531,12 @@
                 flex-direction: column-reverse;
                 align-items: center;
                 text-align: center;
+                gap: 2rem;
             }
 
             .hero-photo {
-                width: 100px;
-                height: 100px;
+                width: 140px;
+                height: 140px;
             }
 
             .bio-item {
@@ -531,22 +547,30 @@
                 justify-content: center;
             }
 
-            nav .links {
-                gap: 0.15rem;
+            .container {
+                padding: 0 1.5rem;
             }
 
-            nav a.nav-link {
-                font-size: 0.75rem;
-                padding: 0.35rem 0.6rem;
+            nav .container {
+                padding: 0 1.5rem;
+            }
+
+            nav .links {
+                gap: 1.5rem;
             }
 
             section {
-                padding: 3rem 0;
+                padding: 3.5rem 0;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
 
             .skills-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 2rem;
             }
 
             .button-group {
@@ -558,9 +582,7 @@
             }
 
             .experience-card {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 0.75rem;
+                gap: 1rem;
             }
         }
     </style>
@@ -584,44 +606,40 @@
             <div class="hero-layout">
                 <div class="hero-text">
                     <h1>Ghouti Belhadj-Kacem</h1>
-                    <p class="subtitle">Data Scientist &bull; AI Engineer</p>
+                    <p class="subtitle">Data Scientist • AI Engineer • ML Researcher</p>
 
                     <div class="bio">
                         <div class="bio-item">
                             <span>🎓</span>
-                            <div>
-                                <strong>ESME</strong> - Bac+4 Ing&eacute;nieur (Sep 2022 - Jun 2027)<br>
-                                Majeure en Data & IA | Focus: Machine Learning, Data Science, LLM
-                            </div>
+                            <div><strong style="color: #ffffff;">ESME</strong> — Bac+4 Ingénieur (Sep 2022 - Jun 2027)</div>
                         </div>
                         <div class="bio-item">
                             <span>🌍</span>
-                            <div>
-                                <strong>HUST</strong> - Wuhan, China (Automne 2025)<br>
-                                Top 0.1% en IA et Innovation
-                            </div>
+                            <div><strong style="color: #ffffff;">HUST</strong> — Wuhan, China (Automne 2025) • Top 0.1%</div>
+                        </div>
+                        <div class="bio-item">
+                            <span>💼</span>
+                            <div>Recherche alternance 12 mois dès <strong style="color: #ffffff;">septembre 2026</strong></div>
                         </div>
                     </div>
 
                     <div class="social-icons">
                         <a href="https://linkedin.com/in/ghouti-belhadj" target="_blank" class="social-icon" title="LinkedIn">
-                            <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
                         </a>
                         <a href="https://github.com/Ghoutibk" target="_blank" class="social-icon" title="GitHub">
-                            <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.544 2.914 1.186.092-.923.35-1.545.636-1.9-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
                         </a>
                         <a href="mailto:ghouti.belhadj@outlook.fr" class="social-icon" title="Email">
-                            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6" fill="none"/></svg>
                         </a>
-                    </div>
-
-                    <div class="alternance-banner">
-                        En recherche d'une <strong>alternance 12 mois d&egrave;s septembre 2026</strong><br>
-                        en Data/IA G&eacute;n&eacute;rative
+                        <a href="#" class="social-icon" title="CV">
+                            <svg viewBox="0 0 24 24"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+                        </a>
                     </div>
                 </div>
                 <div class="hero-photo">
-                    <span class="initials">GB</span>
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=ghouti" alt="Ghouti Belhadj-Kacem">
                 </div>
             </div>
         </div>
@@ -633,32 +651,47 @@
             <h2>Experience</h2>
 
             <div class="experience-card">
-                <div class="exp-logo bcg">BCG</div>
+                <div class="exp-logo">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" fill="#2E7D32"/>
+                        <text x="12" y="18" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff" font-family="Arial">B</text>
+                    </svg>
+                </div>
                 <div class="exp-info">
-                    <h3>BCG X - Data Science &amp; IA G&eacute;n&eacute;rative</h3>
+                    <h3>BCG X — Data Science & IA Générative</h3>
                     <div class="exp-role">Stagiaire Data Scientist GenAI</div>
-                    <div class="exp-date">Juin 2025 - Ao&ucirc;t 2025 &bull; Paris, France</div>
-                    <div class="exp-desc">D&eacute;veloppement d'outils d'IA g&eacute;n&eacute;rative et architectures data pour extraction automatis&eacute;e de KPIs financiers. R&eacute;duction de 30% de la recherche manuelle.</div>
+                    <div class="exp-date">Juin 2025 - Août 2025 • Paris, France</div>
+                    <div class="exp-desc">Développement d'outils d'IA générative et architectures data pour extraction automatisée de KPIs financiers. Réduction 30% de recherche manuelle.</div>
                 </div>
             </div>
 
             <div class="experience-card">
-                <div class="exp-logo acadomia">Acad</div>
+                <div class="exp-logo">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" fill="#5E35B1"/>
+                        <text x="12" y="18" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff" font-family="Arial">A</text>
+                    </svg>
+                </div>
                 <div class="exp-info">
-                    <h3>Acadomia - Tutorat Scientifique</h3>
-                    <div class="exp-role">Tuteur en Math&eacute;matiques et Physique</div>
-                    <div class="exp-date">Octobre 2024 - Pr&eacute;sent &bull; Paris, France</div>
-                    <div class="exp-desc">Enseignement de concepts scientifiques avanc&eacute;s &agrave; 8+ &eacute;l&egrave;ves lyc&eacute;e/sup&eacute;rieur. Am&eacute;lioration jusqu'&agrave; 9 points de moyenne.</div>
+                    <h3>Acadomia — Tutorat Scientifique</h3>
+                    <div class="exp-role">Tuteur en Mathématiques et Physique</div>
+                    <div class="exp-date">Octobre 2024 - Présent • Paris, France</div>
+                    <div class="exp-desc">Enseignement de concepts scientifiques avancés à 8+ élèves lycée/supérieur avec révisions personnalisées. Amélioration jusqu'à 9 points.</div>
                 </div>
             </div>
 
             <div class="experience-card">
-                <div class="exp-logo devexplore">Dev</div>
+                <div class="exp-logo">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="24" height="24" fill="#00897B"/>
+                        <text x="12" y="18" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff" font-family="Arial">D</text>
+                    </svg>
+                </div>
                 <div class="exp-info">
-                    <h3>DevExplore - Club de D&eacute;veloppement ESME</h3>
-                    <div class="exp-role">Pr&eacute;sident</div>
-                    <div class="exp-date">2024 - Pr&eacute;sent &bull; Paris, France</div>
-                    <div class="exp-desc">Gestion Agile d'une &eacute;quipe de 15 personnes. Organisation de projets tech et hackathons pour 600+ &eacute;tudiants.</div>
+                    <h3>DevExplore — Club de Développement ESME</h3>
+                    <div class="exp-role">Président</div>
+                    <div class="exp-date">2024 - Présent • Paris, France</div>
+                    <div class="exp-desc">Management Agile d'une équipe de 15 personnes. Organisation de projets tech et hackathons pour communauté 600+ étudiants.</div>
                 </div>
             </div>
         </div>
@@ -669,124 +702,137 @@
         <div class="container">
             <h2>Projects</h2>
 
-            <div class="project" onclick="toggleProject(this)">
-                <div class="project-header">
-                    <div class="project-title">Assistant Intelligent ChatPDF</div>
-                    <span class="chevron">&rsaquo;</span>
-                </div>
-                <p class="project-desc">Pipeline RAG end-to-end pour extraction intelligente de donn&eacute;es et interrogation LLM</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">RAG</span>
-                    <span class="tech-tag">ChromaDB</span>
-                    <span class="tech-tag">LLM</span>
-                </div>
-                <div class="project-details">
-                    <p>Architectur&eacute; un syst&egrave;me complet de traitement de documents PDF incluant segmentation avanc&eacute;e en chunks, g&eacute;n&eacute;ration d'embeddings haute dimension, stockage vectoriel avec ChromaDB, et interrogation intelligente par LLM.</p>
-                    <div class="highlights">
-                        <div class="highlights-label">Highlights:</div>
-                        <ul class="highlights-list">
-                            <li><span>&#9656;</span> Segmentation PDF optimis&eacute;e</li>
-                            <li><span>&#9656;</span> G&eacute;n&eacute;ration d'embeddings</li>
-                            <li><span>&#9656;</span> Interrogation sans hallucinations</li>
-                        </ul>
+            <div class="projects-grid">
+                <div class="project-card" onclick="toggleProject(this)">
+                    <h3 class="project-title">Assistant Intelligent ChatPDF</h3>
+                    <p class="project-desc">Pipeline RAG end-to-end pour extraction intelligente de données et interrogation LLM sans hallucinations</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">ChromaDB</span>
+                        <span class="tech-tag">LLM</span>
+                    </div>
+                    <div class="project-details">
+                        <p>Architecturé un système complet incluant segmentation PDF en chunks, génération d'embeddings haute dimension, stockage vectoriel ChromaDB, et interrogation LLM avec contraintes contextuelles.</p>
+                        <div class="highlights">
+                            <div class="highlights-label">Highlights:</div>
+                            <ul class="highlights-list">
+                                <li>▪ Segmentation PDF optimisée</li>
+                                <li>▪ Génération d'embeddings</li>
+                                <li>▪ Interrogation sans hallucinations</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ghoutibk" target="_blank" class="project-link">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.544 2.914 1.186.092-.923.35-1.545.636-1.9-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                            Code
+                        </a>
                     </div>
                 </div>
-            </div>
 
-            <div class="project" onclick="toggleProject(this)">
-                <div class="project-header">
-                    <div class="project-title">Chatbot Financier - BCG X</div>
-                    <span class="chevron">&rsaquo;</span>
-                </div>
-                <p class="project-desc">Automatisation d'extraction de KPIs financiers r&eacute;duisant la recherche manuelle de 30%</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Pandas</span>
-                    <span class="tech-tag">Financial Data</span>
-                </div>
-                <div class="project-details">
-                    <p>D&eacute;velopp&eacute; chatbot financier en Python qui automatise l'extraction de KPIs critiques. Architectur&eacute; un pipeline Pandas pour structurer 3 ans de donn&eacute;es financi&egrave;res en m&eacute;triques interactives exploitables.</p>
-                    <div class="highlights">
-                        <div class="highlights-label">Highlights:</div>
-                        <ul class="highlights-list">
-                            <li><span>&#9656;</span> R&eacute;duction 30% de recherche manuelle</li>
-                            <li><span>&#9656;</span> 3 ans de donn&eacute;es structur&eacute;es</li>
-                            <li><span>&#9656;</span> Insights acc&eacute;l&eacute;r&eacute;s de 20%</li>
-                        </ul>
+                <div class="project-card" onclick="toggleProject(this)">
+                    <h3 class="project-title">Chatbot Financier - BCG X</h3>
+                    <p class="project-desc">Automatisation d'extraction de KPIs financiers réduisant la recherche manuelle de 30%</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Financial Data</span>
+                    </div>
+                    <div class="project-details">
+                        <p>Chatbot financier automatisant extraction de KPIs critiques. Pipeline Pandas structurant 3 ans de données financières en métriques interactives.</p>
+                        <div class="highlights">
+                            <div class="highlights-label">Highlights:</div>
+                            <ul class="highlights-list">
+                                <li>▪ Réduction 30% recherche manuelle</li>
+                                <li>▪ 3 ans données structurées</li>
+                                <li>▪ Insights accélérés 20%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ghoutibk" target="_blank" class="project-link">Propriétaire</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="project" onclick="toggleProject(this)">
-                <div class="project-header">
-                    <div class="project-title">D&eacute;tection du Glaucome par ML</div>
-                    <span class="chevron">&rsaquo;</span>
-                </div>
-                <p class="project-desc">Mod&egrave;le de classification pour d&eacute;tection de glaucome avec F1-Score 92%</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">Machine Learning</span>
-                    <span class="tech-tag">TensorFlow</span>
-                    <span class="tech-tag">Medical Imaging</span>
-                </div>
-                <div class="project-details">
-                    <p>D&eacute;velopp&eacute; et compar&eacute; 5 approches diff&eacute;rentes d'extraction de features ainsi que 4 mod&egrave;les de classification pour la d&eacute;tection automatis&eacute;e du glaucome. Valid&eacute; par un ophtalmologue expert.</p>
-                    <div class="highlights">
-                        <div class="highlights-label">Highlights:</div>
-                        <ul class="highlights-list">
-                            <li><span>&#9656;</span> 5 approches de feature extraction</li>
-                            <li><span>&#9656;</span> 4 mod&egrave;les &eacute;valu&eacute;s</li>
-                            <li><span>&#9656;</span> Validation experte ophtalmologue</li>
-                            <li><span>&#9656;</span> F1-Score 92%</li>
-                        </ul>
+                <div class="project-card" onclick="toggleProject(this)">
+                    <h3 class="project-title">Détection du Glaucome par ML</h3>
+                    <p class="project-desc">Modèle classification pour détection glaucome avec F1-Score 92% et validation experte</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Medical Imaging</span>
+                    </div>
+                    <div class="project-details">
+                        <p>5 approches extraction features et 4 modèles classification pour détection automatisée glaucome. Validé par ophtalmologue expert.</p>
+                        <div class="highlights">
+                            <div class="highlights-label">Highlights:</div>
+                            <ul class="highlights-list">
+                                <li>▪ 5 approches feature extraction</li>
+                                <li>▪ 4 modèles évalués</li>
+                                <li>▪ F1-Score 92%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ghoutibk" target="_blank" class="project-link">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.544 2.914 1.186.092-.923.35-1.545.636-1.9-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                            Code
+                        </a>
                     </div>
                 </div>
-            </div>
 
-            <div class="project" onclick="toggleProject(this)">
-                <div class="project-header">
-                    <div class="project-title">Classificateur d'Images Deep Learning</div>
-                    <span class="chevron">&rsaquo;</span>
-                </div>
-                <p class="project-desc">R&eacute;seau de neurones profond pour classification d'images optimis&eacute; pour la production</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">TensorFlow</span>
-                    <span class="tech-tag">Deep Learning</span>
-                    <span class="tech-tag">CNN</span>
-                </div>
-                <div class="project-details">
-                    <p>Construction d'un pipeline de donn&eacute;es complet avec pr&eacute;traitement des images optimis&eacute; pour le Deep Learning. Cr&eacute;ation et entra&icirc;nement d'un r&eacute;seau de neurones profond pour la classification.</p>
-                    <div class="highlights">
-                        <div class="highlights-label">Highlights:</div>
-                        <ul class="highlights-list">
-                            <li><span>&#9656;</span> Pipeline donn&eacute;es complet</li>
-                            <li><span>&#9656;</span> Pr&eacute;traitement optimis&eacute;</li>
-                            <li><span>&#9656;</span> D&eacute;ploiement production</li>
-                        </ul>
+                <div class="project-card" onclick="toggleProject(this)">
+                    <h3 class="project-title">Classificateur d'Images Deep Learning</h3>
+                    <p class="project-desc">Réseau neurones profond classification images avec pipeline data optimisé</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">CNN</span>
+                    </div>
+                    <div class="project-details">
+                        <p>Pipeline données complet avec prétraitement images optimisé. Création et entraînement réseau neurones profond pour classification.</p>
+                        <div class="highlights">
+                            <div class="highlights-label">Highlights:</div>
+                            <ul class="highlights-list">
+                                <li>▪ Pipeline données complet</li>
+                                <li>▪ Prétraitement optimisé</li>
+                                <li>▪ Déploiement production</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ghoutibk" target="_blank" class="project-link">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.544 2.914 1.186.092-.923.35-1.545.636-1.9-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                            Code
+                        </a>
                     </div>
                 </div>
-            </div>
 
-            <div class="project" onclick="toggleProject(this)">
-                <div class="project-header">
-                    <div class="project-title">R&eacute;gression Lin&eacute;aire de A &agrave; Z</div>
-                    <span class="chevron">&rsaquo;</span>
-                </div>
-                <p class="project-desc">Impl&eacute;mentation vectoris&eacute;e de r&eacute;gression lin&eacute;aire sans biblioth&egrave;ques ML pr&eacute;dictives</p>
-                <div class="tech-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">NumPy</span>
-                    <span class="tech-tag">Pandas</span>
-                </div>
-                <div class="project-details">
-                    <p>Cr&eacute;ation d'un mod&egrave;le d'apprentissage en POO sans utiliser de biblioth&egrave;ques pr&eacute;dictives externes. Impl&eacute;mentation vectoris&eacute;e de la Descente de Gradient via NumPy.</p>
-                    <div class="highlights">
-                        <div class="highlights-label">Highlights:</div>
-                        <ul class="highlights-list">
-                            <li><span>&#9656;</span> Mod&egrave;le POO personnalis&eacute;</li>
-                            <li><span>&#9656;</span> Descente de Gradient vectoris&eacute;e</li>
-                            <li><span>&#9656;</span> Validation sur donn&eacute;es r&eacute;elles</li>
-                        </ul>
+                <div class="project-card" onclick="toggleProject(this)">
+                    <h3 class="project-title">Régression Linéaire de A à Z</h3>
+                    <p class="project-desc">Implémentation vectorisée sans bibliothèques ML prédictives, de zéro en POO</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                    <div class="project-details">
+                        <p>Modèle apprentissage POO sans bibliothèques externes. Implémentation vectorisée Descente Gradient via NumPy. Entraînement/test données réelles.</p>
+                        <div class="highlights">
+                            <div class="highlights-label">Highlights:</div>
+                            <ul class="highlights-list">
+                                <li>▪ Modèle POO personnalisé</li>
+                                <li>▪ Descente Gradient vectorisée</li>
+                                <li>▪ Validation données réelles</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Ghoutibk" target="_blank" class="project-link">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.544 2.914 1.186.092-.923.35-1.545.636-1.9-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.137 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                            Code
+                        </a>
                     </div>
                 </div>
             </div>
@@ -848,7 +894,7 @@
                 <div class="skill-category-title">Languages</div>
                 <div class="languages-grid">
                     <div class="language-item">
-                        <p>Fran&ccedil;ais</p>
+                        <p>Français</p>
                         <p>Native</p>
                     </div>
                     <div class="language-item">
@@ -872,9 +918,7 @@
     <section id="contact">
         <div class="container">
             <h2>Get in touch</h2>
-            <p class="contact-text">
-                Je suis ouvert aux opportunit&eacute;s d'alternance et aux projets int&eacute;ressants en IA et Data Science.
-            </p>
+            <p class="contact-text">Je suis ouvert aux opportunités d'alternance et aux projets intéressants en IA et Data Science.</p>
             <div class="button-group">
                 <a href="mailto:ghouti.belhadj@outlook.fr" class="btn btn-primary">Send Email</a>
                 <a href="https://linkedin.com/in/ghouti-belhadj" target="_blank" class="btn btn-secondary">LinkedIn</a>
@@ -885,7 +929,7 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Ghouti Belhadj-Kacem</p>
+            <p>© 2026 Ghouti Belhadj-Kacem</p>
             <p>Champigny-sur-Marne, France</p>
         </div>
     </footer>
@@ -895,7 +939,7 @@
             el.classList.toggle('expanded');
         }
 
-        // Smooth scroll for navigation
+        // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -906,7 +950,7 @@
             });
         });
 
-        // Active nav link on scroll
+        // Active nav
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('nav a.nav-link');
 
