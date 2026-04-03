@@ -20,9 +20,20 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
-            background-color: #000000;
             color: #ffffff;
             line-height: 1.6;
+            
+            /* Fond de base noir */
+            background-color: #000000; 
+            
+            /* Effet Mesh Gradient fixé en haut de la page */
+            background-image: 
+                radial-gradient(circle at 70% 40vh, rgba(28, 35, 80, 0.6) 0%, transparent 80vh),
+                radial-gradient(circle at 30% 20vh, rgba(18, 22, 50, 0.4) 0%, transparent 60vh),
+                radial-gradient(circle at 0% 0%, rgba(10, 12, 20, 0.8) 0%, transparent 50vh);
+            
+            background-repeat: no-repeat;
+            background-position: top;
         }
 
         /* Navigation */
@@ -30,7 +41,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.95);
+            background: rgba(0, 0, 0, 0.8);
             backdrop-filter: blur(12px);
             z-index: 50;
             padding: 1.5rem 0;
@@ -588,7 +599,6 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
         <div class="container">
             <a href="#home" class="logo">~</a>
@@ -600,7 +610,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home">
         <div class="container">
             <div class="hero-layout">
@@ -645,7 +654,6 @@
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience">
         <div class="container">
             <h2>Experience</h2>
@@ -697,7 +705,6 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <h2>Projects</h2>
@@ -839,7 +846,6 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills">
         <div class="container">
             <h2>Skills</h2>
@@ -916,7 +922,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2>Get in touch</h2>
@@ -928,7 +933,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <p>© 2026 Ghouti Belhadj</p>
