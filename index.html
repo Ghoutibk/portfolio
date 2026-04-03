@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ghouti Belhadj - Data & AI Engineer portfolio">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#121316">
     <title>Ghouti Belhadj | Data & AI Engineer</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%23ffffff' font-weight='700'>G</text></svg>">
     <style>
@@ -23,14 +23,17 @@
             color: #ffffff;
             line-height: 1.6;
             
-            /* Fond de base noir */
-            background-color: #000000; 
+            /* Fond de base : gris anthracite très foncé et mat */
+            background-color: #121316; 
             
-            /* Effet Mesh Gradient fixé en haut de la page */
+            /* Effet Mesh Gradient : Orange doux à droite, Bleu acier à gauche */
             background-image: 
-                radial-gradient(circle at 70% 40vh, rgba(28, 35, 80, 0.6) 0%, transparent 80vh),
-                radial-gradient(circle at 30% 20vh, rgba(18, 22, 50, 0.4) 0%, transparent 60vh),
-                radial-gradient(circle at 0% 0%, rgba(10, 12, 20, 0.8) 0%, transparent 50vh);
+                /* Lueur orange/cuivrée douce en haut à droite */
+                radial-gradient(ellipse at 85% 15vh, rgba(185, 90, 50, 0.35) 0%, transparent 75vh),
+                /* Lueur bleue acier/nuit douce à gauche */
+                radial-gradient(ellipse at 10% 50vh, rgba(45, 80, 120, 0.3) 0%, transparent 75vh),
+                /* Léger voile pour lier les deux couleurs au centre */
+                radial-gradient(circle at 50% 30vh, rgba(30, 35, 45, 0.5) 0%, transparent 80vh);
             
             background-repeat: no-repeat;
             background-position: top;
@@ -41,11 +44,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(18, 19, 22, 0.85); /* Adapté au nouveau fond */
             backdrop-filter: blur(12px);
             z-index: 50;
             padding: 1.5rem 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         nav .container {
