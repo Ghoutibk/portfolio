@@ -329,8 +329,24 @@
             display: none;
         }
 
+        /* UX Indicator for expansion */
+        .expand-hint {
+            font-size: 0.75rem;
+            color: #555;
+            margin-top: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .project-card:hover .expand-hint {
+            color: #888;
+        }
+
         .project-card.expanded .project-details {
             display: block;
+        }
+
+        .project-card.expanded .expand-hint {
+            display: none;
         }
 
         .highlights {
@@ -660,10 +676,7 @@
 
             <div class="experience-card">
                 <div class="exp-logo">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="24" height="24" fill="#2E7D32"/>
-                        <text x="12" y="18" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff" font-family="Arial">B</text>
-                    </svg>
+                    <img src="https://logo.clearbit.com/bcg.com" alt="Logo BCG X" style="background-color: #ffffff; width: 100%; height: 100%; object-fit: contain; padding: 6px; border-radius: 0.5rem;">
                 </div>
                 <div class="exp-info">
                     <h3>BCG X — Data Science & IA Générative</h3>
@@ -675,10 +688,7 @@
 
             <div class="experience-card">
                 <div class="exp-logo">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="24" height="24" fill="#5E35B1"/>
-                        <text x="12" y="18" font-size="14" font-weight="bold" text-anchor="middle" fill="#ffffff" font-family="Arial">A</text>
-                    </svg>
+                    <img src="https://logo.clearbit.com/acadomia.fr" alt="Logo Acadomia" style="background-color: #ffffff; width: 100%; height: 100%; object-fit: contain; padding: 6px; border-radius: 0.5rem;">
                 </div>
                 <div class="exp-info">
                     <h3>Acadomia — Tutorat Scientifique</h3>
@@ -719,6 +729,7 @@
                         <span class="tech-tag">ChromaDB</span>
                         <span class="tech-tag">LLM</span>
                     </div>
+                    <div class="expand-hint">▼ Cliquez pour développer</div>
                     <div class="project-details">
                         <p>Architecturé un système complet incluant segmentation PDF en chunks, génération d'embeddings haute dimension, stockage vectoriel ChromaDB, et interrogation LLM avec contraintes contextuelles.</p>
                         <div class="highlights">
@@ -746,6 +757,7 @@
                         <span class="tech-tag">Pandas</span>
                         <span class="tech-tag">Financial Data</span>
                     </div>
+                    <div class="expand-hint">▼ Cliquez pour développer</div>
                     <div class="project-details">
                         <p>Chatbot financier automatisant extraction de KPIs critiques. Pipeline Pandas structurant 3 ans de données financières en métriques interactives.</p>
                         <div class="highlights">
@@ -770,6 +782,7 @@
                         <span class="tech-tag">TensorFlow</span>
                         <span class="tech-tag">Medical Imaging</span>
                     </div>
+                    <div class="expand-hint">▼ Cliquez pour développer</div>
                     <div class="project-details">
                         <p>5 approches extraction features et 4 modèles classification pour détection automatisée glaucome. Validé par ophtalmologue expert.</p>
                         <div class="highlights">
@@ -797,6 +810,7 @@
                         <span class="tech-tag">Deep Learning</span>
                         <span class="tech-tag">CNN</span>
                     </div>
+                    <div class="expand-hint">▼ Cliquez pour développer</div>
                     <div class="project-details">
                         <p>Pipeline données complet avec prétraitement images optimisé. Création et entraînement réseau neurones profond pour classification.</p>
                         <div class="highlights">
@@ -824,6 +838,7 @@
                         <span class="tech-tag">NumPy</span>
                         <span class="tech-tag">Pandas</span>
                     </div>
+                    <div class="expand-hint">▼ Cliquez pour développer</div>
                     <div class="project-details">
                         <p>Modèle apprentissage POO sans bibliothèques externes. Implémentation vectorisée Descente Gradient via NumPy. Entraînement/test données réelles.</p>
                         <div class="highlights">
@@ -962,25 +977,34 @@
         
 
         // ============================================================
-        // 🧭 ACTIVE NAV INDICATOR
+        // 🧭 ACTIVE NAV INDICATOR (Optimisé avec IntersectionObserver)
         // ============================================================
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('nav a.nav-link');
 
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3 // Se déclenche quand 30% de la section est visible
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const currentId = entry.target.getAttribute('id');
+                    
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('data-section') === currentId) {
+                            link.classList.add('active');
+                        }
+                    });
                 }
             });
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('data-section') === current) {
-                    link.classList.add('active');
-                }
-            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
         });
     </script>
 </body>
