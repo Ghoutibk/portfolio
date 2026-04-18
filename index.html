@@ -867,12 +867,16 @@
                     <div class="skill-category-title">Languages & Frameworks</div>
                     <div class="skill-list">
                         <span class="skill-item">Python</span>
+                        <span class="skill-item">C++</span>
                         <span class="skill-item">SQL</span>
+                        <span class="skill-item">Bash</span>
+                        <span class="skill-item">HTML/CSS/JS</span>
                         <span class="skill-item">Pandas</span>
                         <span class="skill-item">PyTorch</span>
                         <span class="skill-item">TensorFlow</span>
+                        <span class="skill-item">Scikit-learn</span>
+                        <span class="skill-item">LangChain</span>
                         <span class="skill-item">HuggingFace</span>
-                        <span class="skill-item">HTML/CSS/JS</span>
                     </div>
                 </div>
 
@@ -886,6 +890,8 @@
                         <span class="skill-item">Deep Learning</span>
                         <span class="skill-item">ChromaDB</span>
                         <span class="skill-item">Embeddings</span>
+                        <span class="skill-item">PowerBI</span>
+                        <span class="skill-item">Tableau</span>
                     </div>
                 </div>
 
@@ -897,6 +903,7 @@
                         <span class="skill-item">Docker</span>
                         <span class="skill-item">Git/GitHub</span>
                         <span class="skill-item">API REST</span>
+                        <span class="skill-item">FastAPI</span>
                     </div>
                 </div>
 
@@ -952,16 +959,10 @@
     </footer>
 
     <script>
-        // ============================================================
-        // 🎬 PROJECT CARD ANIMATIONS
-        // ============================================================
         function toggleProject(el) {
             el.classList.toggle('expanded');
         }
 
-        // ============================================================
-        // 📜 SMOOTH SCROLL
-        // ============================================================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -973,16 +974,13 @@
         });
         
 
-        // ============================================================
-        // 🧭 ACTIVE NAV INDICATOR (Optimisé avec IntersectionObserver)
-        // ============================================================
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('nav a.nav-link');
 
         const observerOptions = {
             root: null,
             rootMargin: '0px',
-            threshold: 0.3 // Se déclenche quand 30% de la section est visible
+            threshold: 0.3
         };
 
         const observer = new IntersectionObserver((entries) => {
